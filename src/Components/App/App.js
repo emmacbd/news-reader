@@ -19,7 +19,7 @@ const App = () => {
 
 
 
-  const searchByCategory = (topic) => {
+   const searchByCategory = (topic) => {
     useEffect((topic) => {
       fetchArticles.getArticlesByCategory(topic)
         .then(data => setArticles(data.results))
@@ -32,8 +32,8 @@ const App = () => {
     <main className="App">
       <NavBar />
       <Switch>
-        <Route exact path="/" newsDrop={allArticles} searchArticles={searchByCategory}>
-          {Dashboard}
+        <Route exact path="/" >
+          {<Dashboard newsDrop={allArticles} searchArticles={searchByCategory}/>}
         </Route>
         <Route exact path="">
           {ArticleDetails}
