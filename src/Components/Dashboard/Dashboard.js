@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArticleCard } from "../ArticleCard/ArticleCard";
 import { v4 as uuidv4 } from 'uuid';
 import "./Dashboard.css"
@@ -7,13 +7,13 @@ import "./Dashboard.css"
 const Dashboard = ({ newsDrop}) => {
     const allArticles = newsDrop.map((article, i) => {
         return (
-            <NavLink key={uuidv4()} to={`/${i}`}>
+            <Link key={uuidv4()} to={`/${i}`}>
                 <ArticleCard 
                 title={article.title}
                 section={article.section}
                 id={article.ui}
                  />
-            </NavLink>
+            </Link>
         )
     })
     return (

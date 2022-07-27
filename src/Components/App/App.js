@@ -27,8 +27,8 @@ const App = () => {
       <Switch>
         <Route exact path="/" render={ () => <Dashboard newsDrop={allArticles}></Dashboard>}>
         </Route>
-        <Route exact path="/:id" render={(match) => {
-          return (<ArticleDetails details={filtArticles[match.match.params.id]}/>)
+        <Route exact path="/:id" render={({match}) => {
+          return (<ArticleDetails details={allArticles[match.params.id]}/>)
         }}/>
       </Switch>
     </main>
