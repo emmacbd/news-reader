@@ -1,10 +1,11 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "./NavBar.css"
 
 const NavBar = () => {
  return (
-    <nav>
-        <h1>NEW YORK TIMES NEWS READER</h1>
+    <nav className="navbar">
+         <Link to="/">NEW YORK TIMES NEWS READER</Link>  
     </nav>
  )
 }

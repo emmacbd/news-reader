@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { fetchArticles } from '../../apiCalls';
+import { getArticles } from '../../apiCalls';
 import { Route, Switch } from 'react-router-dom';
 import Dashboard from '../Dashboard/Dashboard';
 import NavBar from '../NavBar/NavBar';
@@ -9,23 +9,15 @@ import './App.css';
 
 
 const App = () => {
-  // const [allArticles, setArticles] = useState(["home"])
+  const [allArticles, setArticles] = useState([])
   const [filtArticles, setFilter] = useState(["home"])
   const [error, setError] = useState('')
 
   useEffect(() => {
-    fetchArticles.getArticles("home")
-      .then(data => setFilter(data.results))
+      getArticles(filtArticles)
+      .then(data => setArticles(data.results))
       .catch(error => setError(error.message))
-  }, [])
-
-  // useEffect((topic) => {
-  //   fetchArticles.getArticles(topic)
-  //     .then(data => setArticles(data.results))
-  //     .catch(error => setError(error.message))
-  // }, [])
-
-
+  },[filtArticles])
 
 
   return (
@@ -33,7 +25,7 @@ const App = () => {
       <NavBar />
       <ArtFilter setFilter={setFilter} />
       <Switch>
-        <Route exact path="/" render={ () => <Dashboard newsDrop={filtArticles}></Dashboard>}>
+        <Route exact path="/" render={ () => <Dashboard newsDrop={allArticles}></Dashboard>}>
         </Route>
         <Route exact path="/:id" render={(match) => {
           return (<ArticleDetails details={filtArticles[match.match.params.id]}/>)

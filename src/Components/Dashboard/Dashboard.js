@@ -5,9 +5,9 @@ import { v4 as uuidv4 } from 'uuid';
 import "./Dashboard.css"
 
 const Dashboard = ({ newsDrop}) => {
-    const allArticles = newsDrop.map((article) => {
+    const allArticles = newsDrop.map((article, i) => {
         return (
-            <NavLink key={uuidv4()} to={`/articles/${article}`}>
+            <NavLink key={uuidv4()} to={`/${i}`}>
                 <ArticleCard 
                 title={article.title}
                 section={article.section}

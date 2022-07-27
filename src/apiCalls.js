@@ -3,8 +3,7 @@
 // const API_KEY = process.env.REACT_APP_API_KEY;
 // console.log("log", process.env.REACT_APP_API_KEY)
 
-const fetchArticles = {
-    getArticles(category) {
+const  getArticles = (category) => {
         return fetch(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=hWFebNgGuXbNmfxJtLWf8VvCyFDleiay`)
             .then(response => {
                 if (!response.ok) {
@@ -14,6 +13,5 @@ const fetchArticles = {
                 }
             })
     }
-}
 
-export { fetchArticles }
+export { getArticles }
