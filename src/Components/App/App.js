@@ -9,13 +9,13 @@ import './App.css';
 
 
 const App = () => {
-  const [allArticles, setArticles] = useState(["home"])
-  const [filtArticles, setFilter] = useState([])
+  // const [allArticles, setArticles] = useState(["home"])
+  const [filtArticles, setFilter] = useState(["home"])
   const [error, setError] = useState('')
 
   useEffect(() => {
     fetchArticles.getArticles("home")
-      .then(data => setArticles(data.results))
+      .then(data => setFilter(data.results))
       .catch(error => setError(error.message))
   }, [])
 
@@ -31,14 +31,13 @@ const App = () => {
   return (
     <main className="App">
       <NavBar />
+      <ArtFilter setFilter={setFilter} />
       <Switch>
-        <Route exact path="/" >
-          {<ArtFilter setFilter={setFilter}/>}
-          {<Dashboard newsDrop={allArticles} searchArticles={filtArticles}/>}
+        <Route exact path="/" render={ () => <Dashboard newsDrop={filtArticles}></Dashboard>}>
         </Route>
-        <Route exact path="/details">
-          {ArticleDetails}
-        </Route>
+        <Route exact path="/:id" render={(match) => {
+          return (<ArticleDetails details={filtArticles[match.match.params.id]}/>)
+        }}/>
       </Switch>
     </main>
   );

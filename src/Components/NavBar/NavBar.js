@@ -4,7 +4,7 @@ import "./NavBar.css"
 const NavBar = () => {
  return (
     <nav>
-        <h1>I AM A NAV BAR</h1>
+        <h1>NEW YORK TIMES NEWS READER</h1>
     </nav>
  )
 }

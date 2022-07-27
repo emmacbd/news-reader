@@ -11,6 +11,7 @@ const Dashboard = ({ newsDrop}) => {
                 <ArticleCard 
                 title={article.title}
                 section={article.section}
+                id={article.ui}
                  />
             </NavLink>
         )
