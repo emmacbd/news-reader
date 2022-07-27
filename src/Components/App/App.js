@@ -23,7 +23,6 @@ const App = () => {
   return (
     <main className="App">
       <NavBar />
-      <ArtFilter setFilter={setFilter} />
       <Switch>
         <Route exact path="/" render={ () => <Dashboard newsDrop={allArticles}></Dashboard>}>
         </Route>

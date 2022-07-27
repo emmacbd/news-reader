@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import { ArticleCard } from "../ArticleCard/ArticleCard";
 import { v4 as uuidv4 } from 'uuid';
+import ArtFilter from "../ArtFilter/ArtFilter";
 import "./Dashboard.css"
 
 const Dashboard = ({ newsDrop}) => {
@@ -18,6 +19,7 @@ const Dashboard = ({ newsDrop}) => {
     })
     return (
         <section className="dashboard">
+            <ArtFilter/>
             <article className="article-container">
                 {allArticles}
             </article>

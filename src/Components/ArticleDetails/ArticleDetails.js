@@ -5,6 +5,7 @@ const ArticleDetails = ({details}) => {
 
     return(
         <section className="article-details">
+            <img src={details.multimedia[1].url} />
             <h3>{details.title}</h3>
             <h4>{details.byline}</h4>
             <p>{details.abstract}</p>
