@@ -1,0 +1,12 @@
+.navbar {
+    font-size: 50pt;
+}
+
+.header {
+  text-decoration: none;
+}
+
+.header:hover {
+  background-color:thistle; 
+}
+

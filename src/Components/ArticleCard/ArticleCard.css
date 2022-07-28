@@ -1,0 +1,23 @@
+.art-card {
+  text-decoration: none!important;
+  border: 4px solid rgb(155, 177, 177);
+  border-radius: 10px;
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1.5rem;
+  cursor: pointer;
+  color: black;
+  height: 18vh;
+}
+
+.topics {
+  display:flex;
+  flex-direction: column;
+}
+
+.art-topic {
+ margin-bottom: -1%;
+}
