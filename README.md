@@ -2,7 +2,7 @@
 
 ## About The Project
 
-This was the final Take Home Project for Turing School of Software and Design's Front End Engineering program. The goal for this project was to create a New York Times inspired news feed that allows users to view and filter NYT articles by section. Users should be able to navigate the app with ease and be able to use this app on desktop, tablet, or mobile device. The suggested total time to build the app was 8 hours.
+This was the final Take Home Project for Turing School of Software and Design's Front End Engineering program. The goal for this project was to create a New York Times inspired news feed that allows users to view and filter NYT articles by section. Users should be able to navigate the app with ease and use this app on desktop, tablet, or mobile device. The suggested total time to build the app was 8 hours.
 
 ### Minimum Viable Product required:
 * A list of articles
