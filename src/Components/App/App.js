@@ -24,7 +24,7 @@ const App = () => {
     <main className="App">
       <NavBar />
       <Switch>
-        <Route exact path="/" render={ () => <Dashboard newsDrop={allArticles}></Dashboard>}>
+        <Route exact path="/" render={ () => <Dashboard newsDrop={allArticles} setFilter={setFilter}></Dashboard>}>
         </Route>
         <Route exact path="/:id" render={({match}) => {
           return (<ArticleDetails details={allArticles[match.params.id]}/>)

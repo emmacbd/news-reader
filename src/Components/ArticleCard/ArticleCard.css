@@ -1,4 +1,5 @@
 .art-card {
+  text-decoration: none!important;
   border: 4px solid rgb(155, 177, 177);
   border-radius: 10px;
   background-color: azure;
@@ -9,5 +10,14 @@
   margin: 1.5rem;
   cursor: pointer;
   color: black;
-  text-decoration: none;
+  height: 18vh;
+}
+
+.topics {
+  display:flex;
+  flex-direction: column;
+}
+
+.art-topic {
+ margin-bottom: -1%;
 }

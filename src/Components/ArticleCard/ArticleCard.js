@@ -1,11 +1,16 @@
 import React from "react";
 import "./ArticleCard.css"
 
-export const ArticleCard = ({title, section}) => {
+export const ArticleCard = ({title, categories}) => {
     return (
-        <article className="art-card">
+        <article >
             <h2 className="art-title">{title}</h2>
-            <h3>Section : {section}</h3>
+            {categories.length ? 
+            <section className="topics">
+                <h4 className="art-topic">Article Topics : </h4>
+                <p>{categories}</p> </section>: '' }
+            
+            
         </article>
     )
 }

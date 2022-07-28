@@ -5,13 +5,13 @@ import { v4 as uuidv4 } from 'uuid';
 import ArtFilter from "../ArtFilter/ArtFilter";
 import "./Dashboard.css"
 
-const Dashboard = ({ newsDrop}) => {
+const Dashboard = ({ newsDrop, setFilter}) => {
     const allArticles = newsDrop.map((article, i) => {
         return (
-            <Link key={uuidv4()} to={`/${i}`}>
+            <Link key={uuidv4()} to={`/${i}`} className="art-card">
                 <ArticleCard 
                 title={article.title}
-                section={article.section}
+                categories={article.des_facet.join(', ')}
                 id={article.ui}
                  />
             </Link>
@@ -19,7 +19,7 @@ const Dashboard = ({ newsDrop}) => {
     })
     return (
         <section className="dashboard">
-            <ArtFilter/>
+            <ArtFilter setFilter={setFilter} />
             <article className="article-container">
                 {allArticles}
             </article>
