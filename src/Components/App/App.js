@@ -4,7 +4,6 @@ import { Route, Switch } from 'react-router-dom';
 import Dashboard from '../Dashboard/Dashboard';
 import NavBar from '../NavBar/NavBar';
 import ArticleDetails from '../ArticleDetails/ArticleDetails';
-import ArtFilter from "../ArtFilter/ArtFilter";
 import './App.css';
 
 
